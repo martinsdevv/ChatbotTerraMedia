@@ -1,6 +1,5 @@
 import json
 import os
-import time
 
 import streamlit as st
 from dotenv import load_dotenv
@@ -91,7 +90,7 @@ if prompt := st.chat_input("Diga algo..."):
         placeholder = st.empty()
         full_response = ""
 
-        with st.spinner(f"*{current_char['name']} está conspirando...*"):
+        with st.spinner(f"*{current_char['name']} está pensando...*"):
             try:
                 completion = client.chat.completions.create(
                     model="llama-3.3-70b-versatile",
